@@ -1,3 +1,4 @@
+pip==6.0.8
 WebTest
 nose
 nose-cov
