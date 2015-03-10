@@ -19,7 +19,7 @@ $(INSTALL_STAMP): $(PYTHON) setup.py
 	$(VENV)/bin/pip install --process-dependency-links -U -e .
 	touch $(INSTALL_STAMP)
 
-install-dev:
+install-dev: virtualenv
         $(VENV)/bin/pip install -r dev-requirements.txt
         touch $(DEV_STAMP)
 
