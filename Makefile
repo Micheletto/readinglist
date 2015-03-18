@@ -16,7 +16,8 @@ all: install
 install: $(INSTALL_STAMP)
 
 $(INSTALL_STAMP): $(PYTHON) setup.py
-	$(VENV)/bin/pip install --process-dependency-links -U -e .
+	$(VENV)/bin/pip install --upgrade pip
+	$(VENV)/bin/pip install -U -e .
 	touch $(INSTALL_STAMP)
 
 install-dev: virtualenv
